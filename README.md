@@ -10,6 +10,7 @@ A mobile-first static web app for browsing and searching aluminium profiles from
   python3 scripts/build_data.py                                                         # -> data/profiles.json
   ```
 - Run locally: `python3 -m http.server 8770` and open http://127.0.0.1:8770/
-- Deploy: GitHub Pages via `.github/workflows/pages.yml`.
+- Live: https://alspec-profiles.pages.dev/
+- Deploy: Cloudflare Pages via `.github/workflows/cloudflare-pages.yml` on every push to `main` (needs the `CLOUDFLARE_API_TOKEN` repo secret).
 
 Shape icons are original generic drawings, not catalogue artwork. Always confirm specs and stock with Alspec before ordering.
