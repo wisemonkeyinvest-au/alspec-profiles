@@ -30,7 +30,7 @@ const ICON = {
   facade:'<path class="shape-o" d="M6 34V6h28v28M6 14h28M6 24h28M16 6v28M26 6v28"/>',
   misc:'<path class="shape" d="M5 28h30v5H5zM9 20h22v5H9zM13 12h14v5H13z"/>',
   hardware:'<path class="shape-o" d="M14 6v28M26 6v28M10 10h8M22 10h8M10 30h8M22 30h8M14 20h12"/>',
-  endcap:'<rect class="shape" x="9" y="9" width="22" height="22" rx="3"/><rect x="14" y="14" width="12" height="12" rx="1" fill="#101112"/>'
+  endcap:'<rect class="shape" x="9" y="9" width="22" height="22" rx="3"/><rect x="14" y="14" width="12" height="12" rx="1" fill="var(--raised)"/>'
 };
 const svg = k => `<svg viewBox="0 0 40 40" aria-hidden="true">${ICON[k] || ICON.misc}</svg>`;
 const STAR = '<svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>';
@@ -97,8 +97,17 @@ const pdfLink = page => `${DB.pdf_url}#page=${page}`;
 function viewHome() {
   setNav('browse');
   const total = DB.count;
-  let h = `<section class="head"><p class="eyebrow">Alspec Industrial Catalogue · Brendale / Chevallum</p>
-    <h1>Aluminium profiles</h1><p class="lede">${total.toLocaleString()} catalogue lines across ${DB.categories.length} categories. Search by code or size, filter by wall and alloy, star what you need.</p></section>
+  let h = `<section class="hero" aria-label="AlumIndex">
+    <picture>
+      <source type="image/webp" srcset="img/hero.webp">
+      <img src="img/hero.jpg" alt="Aluminium angle, channel, square tube, round tube and I-beam profiles" width="1600" height="900">
+    </picture>
+    <div class="hero-copy">
+      <p class="eyebrow">Alspec Industrial Catalogue · Brendale / Chevallum</p>
+      <h1>Aluminium profiles</h1>
+      <p class="lede">${total.toLocaleString()} catalogue lines across ${DB.categories.length} categories.</p>
+    </div>
+  </section>
     <form class="searchbar" role="search" data-go-search><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>
     <input type="search" name="q" placeholder="Code or size, e.g. 50x50x3 or 1030625" autocomplete="off" enterkeyhint="search" aria-label="Search profiles"></form>`;
   for (const [g, ids] of GROUPS) {

@@ -1,0 +1,13 @@
+{
+  "name": "AlumIndex",
+  "short_name": "AlumIndex",
+  "description": "Browse and search aluminium profiles from the Alspec Industrial Catalogue (Brendale / Chevallum).",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4fafb",
+  "theme_color": "#f4fafb",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
