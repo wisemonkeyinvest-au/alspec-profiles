@@ -100,7 +100,7 @@ function viewHome() {
   let h = `<section class="hero" aria-label="AlumIndex">
     <picture>
       <source type="image/webp" srcset="img/hero.webp">
-      <img src="img/hero.jpg" alt="Aluminium angle, channel, square tube, round tube and I-beam profiles" width="1600" height="900">
+      <img src="img/hero.svg" alt="Aluminium angle, channel, square tube, round tube and I-beam profiles" width="1600" height="900">
     </picture>
     <div class="hero-copy">
       <p class="eyebrow">Alspec Industrial Catalogue · Brendale / Chevallum</p>
