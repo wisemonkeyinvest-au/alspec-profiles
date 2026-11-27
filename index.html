@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AlumIndex · Alspec aluminium profiles</title>
+<meta name="description" content="Browse and search aluminium profiles from the Alspec Industrial Catalogue (Brendale / Chevallum): angles, flat bar, tube, SHS/RHS, channel, sheet and systems.">
+<meta name="theme-color" content="#101112">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#/"><span class="logo" aria-hidden="true"></span><span><b>AlumIndex</b><small>Alspec industrial · Brendale / Chevallum</small></span></a>
+    <nav class="topnav" aria-label="Main">
+      <a href="#/" data-nav="browse">Browse</a>
+      <a href="#/search" data-nav="search">Search</a>
+      <a href="#/shortlist" data-nav="shortlist">Shortlist <span class="badge" data-count></span></a>
+      <a href="#/about" data-nav="about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="app" class="wrap" tabindex="-1"><p class="muted pad">Loading profiles…</p></main>
+<nav class="tabbar" aria-label="Main">
+  <a href="#/" data-nav="browse"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>Browse</a>
+  <a href="#/search" data-nav="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Search</a>
+  <a href="#/shortlist" data-nav="shortlist"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>Shortlist<span class="badge" data-count></span></a>
+  <a href="#/about" data-nav="about"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>About</a>
+</nav>
+<div id="sheet" class="sheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="sheet-title"></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
